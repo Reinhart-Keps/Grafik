@@ -52,15 +52,21 @@
 
 
     
-    $data_awal ="2020-08-02 00:00:00";
-    $loop = 16;
-    $calonketude1 = [];
-    $calonketude2 = [];
-    $calonketum1 = [];
-    $calonketum2 = [];
+    // $data_awal ="2020-08-02 00:00:00";
+    // $loop = 16;
+    // $calonketude1 = [];
+    // $calonketude2 = [];
+    // $calonketum1 = [];
+    // $calonketum2 = [];
     // $data = 12;
 
     function kedua(){
+        $data_awal ="2020-08-02 00:00:00";
+        $loop = 16;
+        $calonketude1 = [];
+        $calonketude2 = [];
+        $calonketum1 = [];
+        $calonketum2 = [];
         for($data=0; $data<$loop*1.5; $data+=6){
             $enamjam = date('Y-m-d H:i:s', strtotime('+1 days +'.$data.'hours',strtotime($data_awal)));
             echo $enamjam;
@@ -94,40 +100,46 @@
     }
     
     // echo '<br>';echo '<br>';
-    function ketiga(){
-        for($data=0; $data<$loop*1.5; $data+=6){
-            $enamjam = date('Y-m-d H:i:s', strtotime('+2 days +'.$data.'hours',strtotime($data_awal)));
-            echo $enamjam;
-            echo '<br>';
-            $calonketude1[]=mysqli_query($conn, "SELECT SUM(calonketude1) AS calonketude1 FROM suara_mmif WHERE calonketude1=1  AND created_at<='$enamjam'");
-            $calonketude2[]=mysqli_query($conn, "SELECT SUM(calonketude2) AS calonketude2 FROM suara_mmif WHERE calonketude2=1  AND created_at<='$enamjam'");
-            $calonketum1[]=mysqli_query($conn, "SELECT SUM(calonketum1) AS calonketum1 FROM suara_mmif WHERE calonketum1=1  AND created_at<='$enamjam'");
-            $calonketum2[]=mysqli_query($conn, "SELECT SUM(calonketum2) AS calonketum2 FROM suara_mmif WHERE calonketum2=1  AND created_at<='$enamjam'");
-        }
-        echo '<br>';
-        $q1 = '';
-        $q2 = '';
-        $q3 = '';
-        $q4 = '';
+    // function ketiga(){
+    //     for($data=0; $data<$loop*1.5; $data+=6){
+    //         $enamjam = date('Y-m-d H:i:s', strtotime('+'.$data.'hours',strtotime($data_awal)));
+    //         echo $enamjam;
+    //         echo '<br>';
+    //         $calonketude1[]=mysqli_query($conn, "SELECT SUM(calonketude1) AS calonketude1 FROM suara_mmif WHERE calonketude1=1  AND created_at<='$enamjam'");
+    //         $calonketude2[]=mysqli_query($conn, "SELECT SUM(calonketude2) AS calonketude2 FROM suara_mmif WHERE calonketude2=1  AND created_at<='$enamjam'");
+    //         $calonketum1[]=mysqli_query($conn, "SELECT SUM(calonketum1) AS calonketum1 FROM suara_mmif WHERE calonketum1=1  AND created_at<='$enamjam'");
+    //         $calonketum2[]=mysqli_query($conn, "SELECT SUM(calonketum2) AS calonketum2 FROM suara_mmif WHERE calonketum2=1  AND created_at<='$enamjam'");
+    //     }
+    //     echo '<br>';
+    //     $q1 = '';
+    //     $q2 = '';
+    //     $q3 = '';
+    //     $q4 = '';
         
-        for($data=0; $data<6;$data++){
-            while($datas = mysqli_fetch_array($calonketude1[$data])) {
-                $q1 = $q1.$datas['calonketude1'].',';
-            }
-            while($datas = mysqli_fetch_array($calonketude2[$data])) {
-                $q2 = $q2.$datas['calonketude2'].',';
-            }
-            while($datas = mysqli_fetch_array($calonketum1[$data])) {
-                $q3 = $q3.$datas['calonketum1'].',';
-            }
-            while($datas = mysqli_fetch_array($calonketum2[$data])) {
-                $q4 = $q4.$datas['calonketum2'].',';
-            }
-        }
-    }
+    //     for($data=0; $data<6;$data++){
+    //         while($datas = mysqli_fetch_array($calonketude1[$data])) {
+    //             $q1 = $q1.$datas['calonketude1'].',';
+    //         }
+    //         while($datas = mysqli_fetch_array($calonketude2[$data])) {
+    //             $q2 = $q2.$datas['calonketude2'].',';
+    //         }
+    //         while($datas = mysqli_fetch_array($calonketum1[$data])) {
+    //             $q3 = $q3.$datas['calonketum1'].',';
+    //         }
+    //         while($datas = mysqli_fetch_array($calonketum2[$data])) {
+    //             $q4 = $q4.$datas['calonketum2'].',';
+    //         }
+    //     }
+    // }
     
     // echo '<br>';echo '<br>';
-    // function pertama(){
+    function pertama(){
+        $data_awal ="2020-08-02 00:00:00";
+        $loop = 16;
+        $calonketude1 = [];
+        $calonketude2 = [];
+        $calonketum1 = [];
+        $calonketum2 = [];
         for($data=0; $data<$loop*1.5; $data+=6){
             $enamjam = date('Y-m-d H:i:s', strtotime('+'. $data .'hours',strtotime($data_awal)));
             echo $enamjam;
@@ -158,7 +170,7 @@
             }
 
         }
-    // }
+    }
     
 
 
@@ -357,7 +369,7 @@ $(document).ready(function() {
 
 
 </script> -->
-<script>
+<!-- <script>
 
         $(document).ready(function() {
             let xlabel = [0];
@@ -432,6 +444,208 @@ $(document).ready(function() {
         });
     });
 
+</script> -->
+
+<script>
+    $(document).ready(function() {
+        var hari1 = $('.grafikKetude').val();
+        var hari2 = $('.grafikKetum').val();
+        console.log(hari1);
+        filterData = (hari1) => {
+            if(hari1 == 'pertama'){
+                console.log(hari1);
+            } else if(hari1 == 'kedua'){
+                chartKetude2(hari1)
+            } else {
+                console.log(hari1)
+            }
+        }
+        chartKetude1 = (hari1) =>{
+            $.ajax({
+                url:'grafik.php',
+                method: 'post',
+                datatype: 'json',
+                success: (res) => {
+                    let xlabel = [0];
+                    let interval = 3000 * 60 * 60 ;
+                    // 
+                    var ctx = document.getElementById('chart1').getContext('2d');
+                    data = {
+                    labels: xlabel,
+                    datasets: [{
+                        label: "Ketum 1",
+                        fillColor: "rgba(220,220,220,0.2)",
+                        strokeColor: "rgba(220,220,220,1)",
+                        pointColor: "rgba(220,220,220,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(220,220,220,1)",
+                        data: [0]
+                        }
+                        , {
+                        label: "Ketum 2",
+                        fillColor: "rgba(151,187,205,0.2)",
+                        strokeColor: "rgba(151,187,205,1)",
+                        pointColor: "rgba(151,187,205,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(151,187,205,1)",
+                        data: [0]    
+                        }]
+                    };  
+                    var options = {}
+
+                    var chart = new Chart(ctx, {
+                        type: 'line',
+                        data: data,
+                        options: options
+                    });
+                    
+                    setInterval(function() {
+                        waktu();
+                        
+                        var chart = new Chart(ctx, {
+                            type: 'line',
+                            data: data,
+                            options: options
+                        });
+                    }, 2000);
+
+                    function waktu() {
+                        let d = new Date();
+                        let n = d.getHours();
+                        xlabel.push(n)
+                        // document.getElementById('tes1').innerHTML = xlabel;
+                        chart.render();
+                    }
+                }
+            })
+        }
+
+        chartKetude2 = (hari1) =>{
+            $.ajax({
+                url:'grafik.php',
+                method: 'post',
+                datatype: 'json',
+                success: (res) => {
+                    let xlabel = [0];
+                    let interval = 3000 * 60 * 60 ;
+                    // 
+                    var ctx = document.getElementById('chart1').getContext('2d');
+                    data = {
+                    labels: xlabel,
+                    datasets: [{
+                        label: "Ketum 1",
+                        fillColor: "rgba(220,220,220,0.2)",
+                        strokeColor: "rgba(220,220,220,1)",
+                        pointColor: "rgba(220,220,220,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(220,220,220,1)",
+                        data: [0]
+                        }
+                        , {
+                        label: "Ketum 2",
+                        fillColor: "rgba(151,187,205,0.2)",
+                        strokeColor: "rgba(151,187,205,1)",
+                        pointColor: "rgba(151,187,205,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(151,187,205,1)",
+                        data: [0]    
+                        }]
+                    };  
+                    var options = {}
+
+                    var chart = new Chart(ctx, {
+                        type: 'line',
+                        data: data,
+                        options: options
+                    });
+                    
+                    setInterval(function() {
+                        waktu();
+                        
+                        var chart = new Chart(ctx, {
+                            type: 'line',
+                            data: data,
+                            options: options
+                        });
+                    }, 2000);
+
+                    function waktu() {
+                        let d = new Date();
+                        let n = d.getHours();
+                        xlabel.push(n)
+                        // document.getElementById('tes1').innerHTML = xlabel;
+                        chart.render();
+                    }
+                }
+            })
+        }
+
+        chartKetude3 = (hari1) =>{
+            $.ajax({
+                url:'grafik.php',
+                method: 'post',
+                datatype: 'json',
+                success: (res) => {
+                    let xlabel = [0];
+                    let interval = 3000 * 60 * 60 ;
+                    // 
+                    var ctx = document.getElementById('chart1').getContext('2d');
+                    data = {
+                    labels: xlabel,
+                    datasets: [{
+                        label: "Ketum 1",
+                        fillColor: "rgba(220,220,220,0.2)",
+                        strokeColor: "rgba(220,220,220,1)",
+                        pointColor: "rgba(220,220,220,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(220,220,220,1)",
+                        data: [0]
+                        }
+                        , {
+                        label: "Ketum 2",
+                        fillColor: "rgba(151,187,205,0.2)",
+                        strokeColor: "rgba(151,187,205,1)",
+                        pointColor: "rgba(151,187,205,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(151,187,205,1)",
+                        data: [0]    
+                        }]
+                    };  
+                    var options = {}
+
+                    var chart = new Chart(ctx, {
+                        type: 'line',
+                        data: data,
+                        options: options
+                    });
+                    
+                    setInterval(function() {
+                        waktu();
+                        
+                        var chart = new Chart(ctx, {
+                            type: 'line',
+                            data: data,
+                            options: options
+                        });
+                    }, 2000);
+
+                    function waktu() {
+                        let d = new Date();
+                        let n = d.getHours();
+                        xlabel.push(n)
+                        // document.getElementById('tes1').innerHTML = xlabel;
+                        chart.render();
+                    }
+                }
+            })
+        }
+    })
 </script>
 
 </body>
