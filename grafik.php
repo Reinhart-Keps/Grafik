@@ -368,7 +368,7 @@ $(document).ready(function() {
     
     var hari2 = $('.grafikKetum').val();
     
-    filterData = (hari2) => {
+    filterDataKetum = (hari2) => {
         if(hari2 == 'pertama2'){
             chartKetum1();
         } else if(hari2 == 'kedua2'){
@@ -388,7 +388,7 @@ $(document).ready(function() {
                 let xlabel = [0];
                 let interval = 3000 * 60 * 60 ;
                 // 
-                var ctx = document.getElementById('chart2').getContext('2d');
+                var ctx1 = document.getElementById('chart2').getContext('2d');
                 data = {
                 labels: xlabel,
                 datasets: [{
@@ -406,7 +406,7 @@ $(document).ready(function() {
                 };  
                 var options = {}
 
-                var chart = new Chart(ctx, {
+                var chart = new Chart(ctx1, {
                     type: 'line',
                     data: data,
                     options: options
@@ -415,7 +415,7 @@ $(document).ready(function() {
                 setInterval(function() {
                     waktu();
                     
-                    var chart = new Chart(ctx, {
+                    var chart = new Chart(ctx1, {
                         type: 'line',
                         data: data,
                         options: options
@@ -441,7 +441,7 @@ $(document).ready(function() {
             success: (res) => {
                 let xlabel = [0];
                 let interval = 3000 * 60 * 60 ;
-                var ctx = document.getElementById('chart2').getContext('2d');
+                var ctx1 = document.getElementById('chart2').getContext('2d');
                 data = {
                 labels: xlabel,
                 datasets: [{
@@ -459,7 +459,7 @@ $(document).ready(function() {
                 };  
                 var options = {}
 
-                var chart = new Chart(ctx, {
+                var chart = new Chart(ctx1, {
                     type: 'line',
                     data: data,
                     options: options
@@ -468,7 +468,7 @@ $(document).ready(function() {
                 setInterval(function() {
                     waktu();
                     
-                    var chart = new Chart(ctx, {
+                    var chart = new Chart(ctx1, {
                         type: 'line',
                         data: data,
                         options: options
@@ -495,7 +495,7 @@ $(document).ready(function() {
                 let xlabel = [0];
                 let interval = 3000 * 60 * 60 ;
                 // 
-                var ctx = document.getElementById('chart2').getContext('2d');
+                var ctx1 = document.getElementById('chart2').getContext('2d');
                 data = {
                 labels: xlabel,
                 datasets: [{
@@ -513,7 +513,7 @@ $(document).ready(function() {
                 };  
                 var options = {}
 
-                var chart = new Chart(ctx, {
+                var chart = new Chart(ctx1, {
                     type: 'line',
                     data: data,
                     options: options
@@ -522,7 +522,7 @@ $(document).ready(function() {
                 setInterval(function() {
                     waktu();
                     
-                    var chart = new Chart(ctx, {
+                    var chart = new Chart(ctx1, {
                         type: 'line',
                         data: data,
                         options: options
@@ -543,16 +543,12 @@ $(document).ready(function() {
     $(document).on('change','#grafikKetum', () => {
     hari2 = $('.grafikKetum').val()
 
-    filterData(hari2)
+    filterDataKetum(hari2)
     });
-})
-</script>
 
-<script>
-    $(document).ready(function() {
         var hari1 = $('.grafikKetude').val();
 
-        filterData = (hari1) => {
+        filterDataKetude = (hari1) => {
             if(hari1 == 'pertama1'){
                 chartKetude1()
             } else if(hari1 == 'kedua1'){
@@ -572,7 +568,7 @@ $(document).ready(function() {
                     let xlabel = [0];
                     let interval = 3000 * 60 * 60 ;
                     // 
-                    var ctx = document.getElementById('chart1').getContext('2d');
+                    var ctx2 = document.getElementById('chart1').getContext('2d');
                     data = {
                     labels: xlabel,
                     datasets: [{
@@ -590,7 +586,7 @@ $(document).ready(function() {
                     };  
                     var options = {}
 
-                    var chart = new Chart(ctx, {
+                    var chart = new Chart(ctx2, {
                         type: 'line',
                         data: data,
                         options: options
@@ -599,7 +595,7 @@ $(document).ready(function() {
                     setInterval(function() {
                         waktu();
                         
-                        var chart = new Chart(ctx, {
+                        var chart = new Chart(ctx2, {
                             type: 'line',
                             data: data,
                             options: options
@@ -625,7 +621,7 @@ $(document).ready(function() {
                 success: (res) => {
                     let xlabel = [0];
                     let interval = 3000 * 60 * 60 ;
-                    var ctx = document.getElementById('chart1').getContext('2d');
+                    var ctx2 = document.getElementById('chart1').getContext('2d');
                     data = {
                     labels: xlabel,
                     datasets: [{
@@ -643,7 +639,7 @@ $(document).ready(function() {
                     };  
                     var options = {}
 
-                    var chart = new Chart(ctx, {
+                    var chart = new Chart(ctx2, {
                         type: 'line',
                         data: data,
                         options: options
@@ -652,7 +648,7 @@ $(document).ready(function() {
                     setInterval(function() {
                         waktu();
                         
-                        var chart = new Chart(ctx, {
+                        var chart = new Chart(ctx2, {
                             type: 'line',
                             data: data,
                             options: options
@@ -679,7 +675,7 @@ $(document).ready(function() {
                     let xlabel = [0];
                     let interval = 3000 * 60 * 60 ;
                     // 
-                    var ctx = document.getElementById('chart1').getContext('2d');
+                    var ctx2 = document.getElementById('chart1').getContext('2d');
                     data = {
                     labels: xlabel,
                     datasets: [{
@@ -697,7 +693,7 @@ $(document).ready(function() {
                     };  
                     var options = {}
 
-                    var chart = new Chart(ctx, {
+                    var chart = new Chart(ctx2, {
                         type: 'line',
                         data: data,
                         options: options
@@ -706,7 +702,7 @@ $(document).ready(function() {
                     setInterval(function() {
                         waktu();
                         
-                        var chart = new Chart(ctx, {
+                        var chart = new Chart(ctx2, {
                             type: 'line',
                             data: data,
                             options: options
@@ -727,7 +723,7 @@ $(document).ready(function() {
         $(document).on('change','#grafikKetude', () => {
         hari1 = $('.grafikKetude').val()
 
-        filterData(hari1)
+        filterDataKetude(hari1)
         });
     })
 </script>
