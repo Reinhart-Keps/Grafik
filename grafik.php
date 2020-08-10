@@ -406,7 +406,7 @@ $(document).ready(function() {
                 };  
                 var options = {}
 
-                var chart = new Chart(ctx1, {
+                var chartKetude = new Chart(ctx1, {
                     type: 'line',
                     data: data,
                     options: options
@@ -415,7 +415,7 @@ $(document).ready(function() {
                 setInterval(function() {
                     waktu();
                     
-                    var chart = new Chart(ctx1, {
+                    var chartKetude = new Chart(ctx1, {
                         type: 'line',
                         data: data,
                         options: options
@@ -427,7 +427,7 @@ $(document).ready(function() {
                     let n = d.getHours();
                     xlabel.push(n)
                     // document.getElementById('tes1').innerHTML = xlabel;
-                    chart.render();
+                    chartKetude.render();
                 }
             }
         })
@@ -459,7 +459,7 @@ $(document).ready(function() {
                 };  
                 var options = {}
 
-                var chart = new Chart(ctx1, {
+                var chartKetude = new Chart(ctx1, {
                     type: 'line',
                     data: data,
                     options: options
@@ -468,7 +468,7 @@ $(document).ready(function() {
                 setInterval(function() {
                     waktu();
                     
-                    var chart = new Chart(ctx1, {
+                    var chartKetude = new Chart(ctx1, {
                         type: 'line',
                         data: data,
                         options: options
@@ -480,7 +480,7 @@ $(document).ready(function() {
                     let n = d.getHours();
                     xlabel.push(n)
                     // document.getElementById('tes1').innerHTML = xlabel;
-                    chart.render();
+                    chartKetude.render();
                 }
             }
         })
@@ -513,7 +513,7 @@ $(document).ready(function() {
                 };  
                 var options = {}
 
-                var chart = new Chart(ctx1, {
+                var chartKetude = new Chart(ctx1, {
                     type: 'line',
                     data: data,
                     options: options
@@ -522,7 +522,7 @@ $(document).ready(function() {
                 setInterval(function() {
                     waktu();
                     
-                    var chart = new Chart(ctx1, {
+                    var chartKetude = new Chart(ctx1, {
                         type: 'line',
                         data: data,
                         options: options
@@ -534,7 +534,7 @@ $(document).ready(function() {
                     let n = d.getHours();
                     xlabel.push(n)
                     // document.getElementById('tes1').innerHTML = xlabel;
-                    chart.render();
+                    chartKetude.render();
                 }
             }
         })
@@ -586,7 +586,7 @@ $(document).ready(function() {
                     };  
                     var options = {}
 
-                    var chart = new Chart(ctx2, {
+                    var chartKetum = new Chart(ctx2, {
                         type: 'line',
                         data: data,
                         options: options
@@ -595,7 +595,7 @@ $(document).ready(function() {
                     setInterval(function() {
                         waktu();
                         
-                        var chart = new Chart(ctx2, {
+                        var chartKetum = new Chart(ctx2, {
                             type: 'line',
                             data: data,
                             options: options
@@ -607,7 +607,7 @@ $(document).ready(function() {
                         let n = d.getHours();
                         xlabel.push(n)
                         // document.getElementById('tes1').innerHTML = xlabel;
-                        chart.render();
+                        chartKetum.render();
                     }
                 }
             })
@@ -639,7 +639,7 @@ $(document).ready(function() {
                     };  
                     var options = {}
 
-                    var chart = new Chart(ctx2, {
+                    var chartKetum = new Chart(ctx2, {
                         type: 'line',
                         data: data,
                         options: options
@@ -648,7 +648,7 @@ $(document).ready(function() {
                     setInterval(function() {
                         waktu();
                         
-                        var chart = new Chart(ctx2, {
+                        var chartKetum = new Chart(ctx2, {
                             type: 'line',
                             data: data,
                             options: options
@@ -660,7 +660,7 @@ $(document).ready(function() {
                         let n = d.getHours();
                         xlabel.push(n)
                         // document.getElementById('tes1').innerHTML = xlabel;
-                        chart.render();
+                        chartKetum.render();
                     }
                 }
             })
@@ -693,7 +693,7 @@ $(document).ready(function() {
                     };  
                     var options = {}
 
-                    var chart = new Chart(ctx2, {
+                    var chartKetum = new Chart(ctx2, {
                         type: 'line',
                         data: data,
                         options: options
@@ -702,7 +702,7 @@ $(document).ready(function() {
                     setInterval(function() {
                         waktu();
                         
-                        var chart = new Chart(ctx2, {
+                        var chartKetum = new Chart(ctx2, {
                             type: 'line',
                             data: data,
                             options: options
@@ -714,7 +714,7 @@ $(document).ready(function() {
                         let n = d.getHours();
                         xlabel.push(n)
                         // document.getElementById('tes1').innerHTML = xlabel;
-                        chart.render();
+                        chartKetum.render();
                     }
                 }
             })
