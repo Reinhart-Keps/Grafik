@@ -325,6 +325,7 @@
         </select>
     </form>
     <canvas id="chart1"></canvas>
+    
 </div>
 <div style="width: 350px; height:350px; margin: auto;">
     <form action="" method="post" id="grafikKetum">
@@ -336,6 +337,7 @@
         </select>
     </form>
     <canvas id="chart2"></canvas>
+    
 </div>
 
 
@@ -415,7 +417,7 @@ $(document).ready(function() {
                 };  
                 var options = {}
 
-                var window.ctx2 = new Chart(ctx1, {
+                window.ctx2 = new Chart(ctx2, {
                     type: 'line',
                     data: data,
                     options: options
@@ -424,7 +426,7 @@ $(document).ready(function() {
                 setInterval(function() {
                     waktu();
                     
-                var window.ctx2 = new Chart(ctx1, {
+                window.ctx2 = new Chart(ctx2, {
                     type: 'line',
                     data: data,
                     options: options
@@ -472,7 +474,7 @@ $(document).ready(function() {
                 };  
                 var options = {}
 
-                var window.ctx2 = new Chart(ctx1, {
+                window.ctx2 = new Chart(ctx2, {
                     type: 'line',
                     data: data,
                     options: options
@@ -481,7 +483,7 @@ $(document).ready(function() {
                 setInterval(function() {
                     waktu();
                     
-                    var window.ctx2 = new Chart(ctx1, {
+                    window.ctx2 = new Chart(ctx2, {
                         type: 'line',
                         data: data,
                         options: options
@@ -529,7 +531,7 @@ $(document).ready(function() {
                 };  
                 var options = {}
 
-                var window.ctx2 = new Chart(ctx1, {
+                window.ctx2 = new Chart(ctx2, {
                     type: 'line',
                     data: data,
                     options: options
@@ -538,7 +540,7 @@ $(document).ready(function() {
                 setInterval(function() {
                     waktu();
                     
-                    var window.ctx2 = new Chart(ctx1, {
+                    window.ctx2 = new Chart(ctx2, {
                         type: 'line',
                         data: data,
                         options: options
@@ -563,7 +565,7 @@ $(document).ready(function() {
     });
 
         var hari1 = $('.grafikKetude').val();
-        var ctx1 = document.getElementById('chart2').getContext('2d');
+        var ctx1 = document.getElementById('chart1').getContext('2d');
         filterDataKetude = (hari1) => {
             if(hari1 == 'pertama1'){
                 chartKetude1()
@@ -589,7 +591,7 @@ $(document).ready(function() {
                     if(window.ctx1 != undefined){
                         window.ctx1.destroy();
                     } 
-                    var ctx1 = document.getElementById('chart2').getContext('2d');
+                    var ctx1 = document.getElementById('chart1').getContext('2d');
                     data = {
                     labels: xlabel,
                     datasets: [{
@@ -607,7 +609,7 @@ $(document).ready(function() {
                     };  
                     var options = {}
 
-                    var window.ctx1 = new Chart(ctx2, {
+                    window.ctx1 = new Chart(ctx1, {
                         type: 'line',
                         data: data,
                         options: options
@@ -616,7 +618,7 @@ $(document).ready(function() {
                     setInterval(function() {
                         waktu();
                         
-                        var window.ctx1 = new Chart(ctx2, {
+                        window.ctx1 = new Chart(ctx1, {
                             type: 'line',
                             data: data,
                             options: options
@@ -646,7 +648,7 @@ $(document).ready(function() {
                     if(window.ctx1 != undefined){
                         window.ctx1.destroy();
                     } 
-                    var ctx1 = document.getElementById('chart2').getContext('2d');
+                    var ctx1 = document.getElementById('chart1').getContext('2d');
                     data = {
                     labels: xlabel,
                     datasets: [{
@@ -664,7 +666,7 @@ $(document).ready(function() {
                     };  
                     var options = {}
 
-                    var window.ctx1 = new Chart(ctx2, {
+                    window.ctx1 = new Chart(ctx1, {
                         type: 'line',
                         data: data,
                         options: options
@@ -673,7 +675,7 @@ $(document).ready(function() {
                     setInterval(function() {
                         waktu();
                         
-                        var window.ctx1 = new Chart(ctx2, {
+                        window.ctx1 = new Chart(ctx1, {
                             type: 'line',
                             data: data,
                             options: options
@@ -703,7 +705,7 @@ $(document).ready(function() {
                     if(window.ctx1 != undefined){
                         window.ctx1.destroy();
                     } 
-                    var ctx1 = document.getElementById('chart2').getContext('2d');
+                    var ctx1 = document.getElementById('chart1').getContext('2d');
                     data = {
                     labels: xlabel,
                     datasets: [{
@@ -721,7 +723,7 @@ $(document).ready(function() {
                     };  
                     var options = {}
 
-                    var window.ctx1 = new Chart(ctx2, {
+                    window.ctx1 = new Chart(ctx1, {
                         type: 'line',
                         data: data,
                         options: options
@@ -730,7 +732,7 @@ $(document).ready(function() {
                     setInterval(function() {
                         waktu();
                         
-                        var window.ctx1 = new Chart(ctx2, {
+                        window.ctx1 = new Chart(ctx1, {
                             type: 'line',
                             data: data,
                             options: options
