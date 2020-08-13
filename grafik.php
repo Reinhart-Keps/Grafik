@@ -424,7 +424,7 @@ $(document).ready(function() {
                 });
                 
                 setInterval(function() {
-                    waktu();
+                    waktu1();
                     
                 window.ctx2 = new Chart(ctx2, {
                     type: 'line',
@@ -433,12 +433,12 @@ $(document).ready(function() {
                 });
                 }, 2000);
 
-                function waktu() {
+                function waktu1() {
                     let d = new Date();
                     let n = d.getHours();
                     xlabel.push(n)
                     // document.getElementById('tes1').innerHTML = xlabel;
-                    chartKetude.render();
+                    window.ctx2.render();
                 }
             }
         })
@@ -481,7 +481,7 @@ $(document).ready(function() {
                 });
                 
                 setInterval(function() {
-                    waktu();
+                    waktu1();
                     
                     window.ctx2 = new Chart(ctx2, {
                         type: 'line',
@@ -490,12 +490,12 @@ $(document).ready(function() {
                     });
                 }, 2000);
 
-                function waktu() {
+                function waktu1() {
                     let d = new Date();
                     let n = d.getHours();
                     xlabel.push(n)
                     // document.getElementById('tes1').innerHTML = xlabel;
-                    chartKetude.render();
+                    window.ctx2.render();
                 }
             }
         })
@@ -538,7 +538,7 @@ $(document).ready(function() {
                 });
                 
                 setInterval(function() {
-                    waktu();
+                    waktu1();
                     
                     window.ctx2 = new Chart(ctx2, {
                         type: 'line',
@@ -546,17 +546,24 @@ $(document).ready(function() {
                         options: options
                     });
                 }, 2000);
-
-                function waktu() {
+                function waktu1() {
                     let d = new Date();
                     let n = d.getHours();
                     xlabel.push(n)
                     // document.getElementById('tes1').innerHTML = xlabel;
-                    chartKetude.render();
+                    window.ctx2.render();
                 }
             }
         })
     }
+
+    // function waktu1() {
+    //     let d = new Date();
+    //     let n = d.getHours();
+    //     xlabel.push(n)
+    //     // document.getElementById('tes1').innerHTML = xlabel;
+    //     // chartKetum.render();
+    // }
 
     $(document).on('change','#grafikKetum', () => {
     hari2 = $('.grafikKetum').val()
@@ -616,7 +623,7 @@ $(document).ready(function() {
                     });
                     
                     setInterval(function() {
-                        waktu();
+                        waktu2();
                         
                         window.ctx1 = new Chart(ctx1, {
                             type: 'line',
@@ -625,12 +632,12 @@ $(document).ready(function() {
                         });
                     }, 2000);
 
-                    function waktu() {
+                    function waktu2() {
                         let d = new Date();
                         let n = d.getHours();
                         xlabel.push(n)
                         // document.getElementById('tes1').innerHTML = xlabel;
-                        chartKetum.render();
+                        window.ctx1.render();
                     }
                 }
             })
@@ -673,7 +680,7 @@ $(document).ready(function() {
                     });
                     
                     setInterval(function() {
-                        waktu();
+                        waktu2();
                         
                         window.ctx1 = new Chart(ctx1, {
                             type: 'line',
@@ -682,12 +689,12 @@ $(document).ready(function() {
                         });
                     }, 2000);
 
-                    function waktu() {
+                    function waktu2() {
                         let d = new Date();
                         let n = d.getHours();
                         xlabel.push(n)
                         // document.getElementById('tes1').innerHTML = xlabel;
-                        chartKetum.render();
+                        window.ctx1.render();
                     }
                 }
             })
@@ -730,25 +737,33 @@ $(document).ready(function() {
                     });
                     
                     setInterval(function() {
-                        waktu();
+                        waktu2();
                         
-                        window.ctx1 = new Chart(ctx1, {
-                            type: 'line',
-                            data: data,
-                            options: options
-                        });
+                    window.ctx1 = new Chart(ctx1, {
+                        type: 'line',
+                        data: data,
+                        options: options
+                    });
                     }, 2000);
 
-                    function waktu() {
+                    function waktu2() {
                         let d = new Date();
                         let n = d.getHours();
                         xlabel.push(n)
                         // document.getElementById('tes1').innerHTML = xlabel;
-                        chartKetum.render();
+                        window.ctx1.render();
                     }
                 }
             })
         }
+
+        // function waktu2() {
+        //     let d = new Date();
+        //     let n = d.getHours();
+        //     xlabel.push(n)
+        //     // document.getElementById('tes1').innerHTML = xlabel;
+        //     // window.ctx1.render();
+        // }
 
         $(document).on('change','#grafikKetude', () => {
         hari1 = $('.grafikKetude').val()
