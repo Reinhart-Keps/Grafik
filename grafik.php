@@ -438,7 +438,7 @@ $(document).ready(function() {
                     let n = d.getHours();
                     xlabel.push(n)
                     // document.getElementById('tes1').innerHTML = xlabel;
-                    window.ctx2.render();
+                    ctx2.render();
                 }
             }
         })
@@ -495,7 +495,7 @@ $(document).ready(function() {
                     let n = d.getHours();
                     xlabel.push(n)
                     // document.getElementById('tes1').innerHTML = xlabel;
-                    window.ctx2.render();
+                    ctx2.render();
                 }
             }
         })
@@ -551,7 +551,7 @@ $(document).ready(function() {
                     let n = d.getHours();
                     xlabel.push(n)
                     // document.getElementById('tes1').innerHTML = xlabel;
-                    window.ctx2.render();
+                    ctx2.render();
                 }
             }
         })
@@ -637,7 +637,7 @@ $(document).ready(function() {
                         let n = d.getHours();
                         xlabel.push(n)
                         // document.getElementById('tes1').innerHTML = xlabel;
-                        window.ctx1.render();
+                        ctx1.render();
                     }
                 }
             })
@@ -694,7 +694,7 @@ $(document).ready(function() {
                         let n = d.getHours();
                         xlabel.push(n)
                         // document.getElementById('tes1').innerHTML = xlabel;
-                        window.ctx1.render();
+                        ctx1.render();
                     }
                 }
             })
@@ -751,7 +751,7 @@ $(document).ready(function() {
                         let n = d.getHours();
                         xlabel.push(n)
                         // document.getElementById('tes1').innerHTML = xlabel;
-                        window.ctx1.render();
+                        ctx1.render();
                     }
                 }
             })
